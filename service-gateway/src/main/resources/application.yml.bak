@@ -1,0 +1,30 @@
+logging:
+  level:
+    root: ${logLevel:debug}
+
+spring:
+  application:
+    name: service-gateway
+
+server:
+  port: 6522
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:6521/eureka/
+
+#zuul:
+#  routes:
+#    user-server:
+#      path: /user-server/**
+#      service-id: user-server
+#    notice-server:
+#      path: /notice-server/**
+#      service-id: notice-server
+#    timer-server:
+#      path: /timer-server/**
+#      service-id: timer-server
+#    report-server:
+#      path: /report-server/**
+#      service-id: report-server

@@ -1,0 +1,24 @@
+logging:
+  level:
+    root: ${logLevel:debug}
+
+spring:
+  application:
+    name: config-server
+
+server:
+  port: 6523
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:6521/eureka/
+
+spring.cloud.config:
+  server:
+    git:
+      uri: https://github.com/xiaoping1988/ping-spring-cloud-micro-service-config/
+      searchPaths: '{application}'
+#      username:
+#      password:
+  label: master

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: service-c
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:6521/eureka/
+
+# 变更配置经post请求refresh操作时要忽略权限拦截
+management.security.enabled: false
+
+spring.cloud:
+  config:
+    enabled: true
+    discovery:
+      enabled: true
+      serviceId: config-server
+    failFast: true
+    name: service-c
+    label: master
+    profile: default
+    username:
+    password:
